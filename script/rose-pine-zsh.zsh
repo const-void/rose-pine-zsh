@@ -4,17 +4,18 @@
 # colorize_zsh <theme>
 function colorize_zsh() {
   local theme="rose-pine"
+  local theme_path=~/.config/zsh/rose-pine-zsh/themes
 
   # opt param chk
   if [[ "${#}" -ne 0 ]]; then
     local theme_input=$1
 
-    if [[ -f ~/.config/zsh/themes/${theme_input}.zsh ]]; then
+    if [[ -f ${theme_path}/${theme_input}.zsh ]]; then
       theme="${theme_input}"
     fi
   fi
   
-  source ~/.config/zsh/themes/${THEME}.zsh
+  source ${theme_path}/${theme}.zsh
 }
 
 ## true-color ansi token helpers
