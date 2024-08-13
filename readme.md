@@ -65,9 +65,11 @@ $ ./verify-theme.zsh rose-pine-dawn
 ```
 
 ## Gallery
-![Rosé Pine](./doc/rose-pine.png)
-![Rosé Pine Moon](./doc/rose-pine-moon.png)
-![Rosé Pine Dawn](./doc/rose-pine-dawn.png)
+![Rosé Pine](./doc/rose-pine.png | width=100)
+
+![Rosé Pine Moon](./doc/rose-pine-moon.png | width=100)
+
+![Rosé Pine Dawn](./doc/rose-pine-dawn.png | width=100)
 
 ## Contributing 
 (at some point)
