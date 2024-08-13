@@ -2,13 +2,13 @@
 # verify-theme.zsh [theme]
 #
 # (C) 2024 const void*, free + open
+CUR_PATH=$(dirname ${0:a})
 THEME="rose-pine"
-
 # opt param chk
 if [[ "${#}" -ne 0 ]]; then
   local theme_input=$1
 
-  if [[ -f "../dist/themes/${theme_input}.zsh" ]]; then
+  if [[ -f "${CUR_PATH}/../dist/themes/${theme_input}.zsh" ]]; then
     THEME="${theme_input}"
   else
     echo "Usage: verify-theme.zsh <theme>"
@@ -17,7 +17,7 @@ if [[ "${#}" -ne 0 ]]; then
     exit 1
   fi
 fi
-source ../dist/themes/${THEME}.zsh
+source ${CUR_PATH}/../dist/themes/${THEME}.zsh
 
 ## true-color ansi token helpers
 term16m_bgn='\033['
