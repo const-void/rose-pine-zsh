@@ -14,9 +14,16 @@
 ## Installation (temp)
 
 ```zsh
+# cp
 $ git clone https://github.com/const-void/rose-pine-zsh.git
+
+# bld from template
 $ cd path/to/rose-pine/build/dist
-node cli.js -f rgb-ansi -t ~/path/to/rose-pine-zsh/src/template.zsh -o ~/path/to/rose-pine-zsh/dist/themes
+$ node cli.js -f rgb-ansi -t ~/path/to/rose-pine-zsh/src/template.zsh -o ~/path/to/rose-pine-zsh/dist/themes
+
+# tst
+$ cd ~/path/to/rose-pine-zsh/
+$ make test
 ```
 
 
@@ -58,9 +65,9 @@ $ ./verify-theme.zsh rose-pine-dawn
 ```
 
 ## Gallery
-![Rosé Pine](docs/rose-pine.png)
-![Rosé Pine Moon](docs/rose-pine-moon.png)
-![Rosé Pine Dawn](docs/rose-pine-dawn.png)
+![Rosé Pine](./doc/docs/rose-pine.png)
+![Rosé Pine Moon](./docs/rose-pine-moon.png)
+![Rosé Pine Dawn](./docs/rose-pine-dawn.png)
 
 ## Contributing 
 (at some point)
