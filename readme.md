@@ -1,6 +1,6 @@
 <p align="center">
     <img src="https://github.com/rose-pine/rose-pine-theme/raw/main/assets/icon.png" width="80" />
-    <h2 align="center">Rosé Pine for App</h2>
+    <h2 align="center">Rosé Pine for zsh</h2>
 </p>
 
 <p align="center">All natural pine, faux fur and a bit of soho vibes for the classy minimalist</p>
@@ -11,21 +11,59 @@
     </a>
 </p>
 
-## Usage
+## Installation (temp)
 
-1. Open App
-2. Under settings, import `rose-pine.theme`
-3. Select `Rosé Pine` from the themes dropdown
+```zsh
+$ git clone https://github.com/const-void/rose-pine-zsh.git
+$ cd path/to/rose-pine/build/dist
+node cli.js -f rgb-ansi -t ~/path/to/rose-pine-zsh/src/template.zsh -o ~/path/to/rose-pine-zsh/dist/themes
+```
+
+
+
+## Installation - PENDING
+```zsh
+$ git clone https://github.com/const-void/rose-pine-zsh.git
+$ cd rose-pine-zsh
+$ make install 
+$ vi ~/.zshrc
+...
+source ~/.config/zsh/rose-pine-zsh/rose-pine-zsh.zsh
+colorize_zsh "rose-pine"
+...
+# sample prompt
+COLOR_POST=$(term16m_set_color ${TERM16M_BASE} ${TERM16M_IRIS})
+COLOR_AT=$(term16m_set_color ${TERM16M_BASE} ${TERM16M_MUTED})
+COLOR_DIR=$(term16m_set_color ${TERM16M_OVERLAY} ${TERM16M_GOLD})
+COLOR_PMPT=$(term16m_set_color ${TERM16M_BASE} ${TERM16M_ROSE})
+COLOR_CMD=$(term16m_set_color ${TERM16M_BASE} ${TERM16M_TEXT})
+prompt="${COLOR_POST}%n${COLOR_AT}@${COLOR_POST}%m ${COLOR_DIR}%1~${COLOR_PMPT} %# ${COLOR_CMD}"
+,,,
+$ ~/.zshrc
+
+```
+## Test
+```zsh
+$ cd rose-pine-zsh
+$ make test
+```
+
+-or-
+
+```zsh
+$ cd rose-pine-zsh/test
+$ ./verify-theme.zsh rose-pine
+$ ./verify-theme.zsh rose-pine-moon
+$ ./verify-theme.zsh rose-pine-dawn
+```
 
 ## Gallery
+![Rosé Pine](docs/rose-pine.png)
+![Rosé Pine Moon](docs/rose-pine-moon.png)
+![Rosé Pine Dawn](docs/rose-pine-dawn.png)
 
-![Rosé Pine with App](https://user-images.githubusercontent.com/1474821/166155319-06796439-95a7-4aea-910e-927c1f24518e.png)
-
-## Thanks to
-
-- [You, it's you!](https://github.com/<username>)
-
-## Contributing
+## Contributing 
+(at some point)
 
 > Prefer using [@rose-pine/build](https://github.com/rose-pine/build) when possible
 
@@ -34,14 +72,3 @@ Modify `template.json` using Rosé Pine variables, then build variants:
 ```sh
 npx @rose-pine/build@latest
 ```
-
-## Style guide
-
-> Be sure to remove this section 😌
-
-- Lowercase meta files, eg. `readme.md`
-- Repo name should be the simplest version of the app name, eg. iterm instead of iTerm2
-- Add a description and topics to automatically show the theme on [rosepinetheme.com/themes](https://rosepinetheme.com/themes)
-    - Description should read "Soho vibes for App" where "App" is the display name
-    - Topics should include [existing categories](https://rosepinetheme.com/themes)
-    - Generate and upload social image via [Rosé Pine Images](https://rose-pine-images.vercel.app)
