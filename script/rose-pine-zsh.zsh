@@ -28,5 +28,5 @@ export term16m_reset="${term16m_bgn}0${term16m_end}"
 
 #echo -e "$(term16m_set_color <bg> <fg>)some text${term16m_reset}"
 function term16m_set_color() {
-  echo "${term16m_bgn}${term16m_bg}$1;${term16m_fg}$2${term16m_end}"
+  echo "%{${term16m_bgn}${term16m_bg}$1;${term16m_fg}$2${term16m_end}%}"
 }
